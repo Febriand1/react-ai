@@ -1,11 +1,11 @@
-import React, { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef } from "react";
 import updateConversation, { scrollBottom } from "../utils";
 import sendMessageToAPI from "../api";
 
 const BaseURL = import.meta.env.VITE_API_CHAT_URL;
 
 const withHooks = (WrappedComponent) => {
-  return (props) => {
+  return () => {
     const api = BaseURL + "/chat";
 
     const [input, setInput] = useState("");
@@ -44,7 +44,7 @@ const withHooks = (WrappedComponent) => {
       scrollBottom();
     }, [conversation]);
 
-    return(
+    return (
       <WrappedComponent
         inputRef={inputRef}
         input={input}

@@ -1,4 +1,3 @@
-import React from "react";
 import Buttons from "../components/button";
 import InputArea from "../components/inputArea";
 

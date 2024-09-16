@@ -1,4 +1,3 @@
-import React from "react";
 import Headers from "./header";
 import Chat from "./chat";
 import Form from "./form";
